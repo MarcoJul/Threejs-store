@@ -1,8 +1,16 @@
 import Sizes from "../Utils/Sizes";
 import Time from "../Utils/Time";
 
+let instance = null;
+
 export default class Experience {
   constructor(canvas){
+
+    //Singleton
+    if(instance) return instance;
+
+    instance = this;
+
     this.canvas = canvas;
 
     this.sizes = new Sizes();
@@ -24,6 +32,6 @@ export default class Experience {
   }
 
   update(){
-    
+
   }
 }
