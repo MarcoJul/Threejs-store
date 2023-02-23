@@ -1,5 +1,5 @@
-import Sizes from "../Utils/Sizes";
-import Time from "../Utils/Time";
+import Sizes from "./Utils/Sizes";
+import Time from "./Utils/Time";
 
 let instance = null;
 
