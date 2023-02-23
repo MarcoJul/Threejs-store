@@ -11,6 +11,8 @@ export default class Camera {
     this.canvas = this.experience.canvas;
 
     this.setInstance();
+    this.setOrbitControls();
+
   }
 
   setInstance() {
