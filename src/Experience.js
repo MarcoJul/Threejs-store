@@ -1,3 +1,6 @@
+import * as THREE from 'three';
+
+import Camera from "./Camera";
 import Sizes from "./Utils/Sizes";
 import Time from "./Utils/Time";
 
@@ -11,10 +14,16 @@ export default class Experience {
 
     instance = this;
 
+    // Options
+
     this.canvas = canvas;
+
+    // Setup
 
     this.sizes = new Sizes();
     this.time = new Time();
+    this.scene = new THREE.Scene();
+    this.camera = new Camera();
 
     // Sizes resize event
     this.sizes.on("resize", () => {
