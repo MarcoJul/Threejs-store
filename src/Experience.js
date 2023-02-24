@@ -5,6 +5,7 @@ import Renderer from './Renderer';
 import Sizes from "./Utils/Sizes";
 import Time from "./Utils/Time";
 import World from './World/World';
+import Environment from './World/Environment';
 
 let instance = null;
 
@@ -29,6 +30,7 @@ export default class Experience {
 
     this.renderer = new Renderer();
     this.world = new World();
+    this.environment = new Environment();
 
 
 
@@ -52,5 +54,6 @@ export default class Experience {
   update(){
     this.camera.update();
     this.renderer.update();
+    this.environment.update();
   }
 }
